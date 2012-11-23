@@ -1,8 +1,8 @@
 template<typename T>
-void shuffle(vector<T>& xs, Random& rnd) {
-	const int n = xs.size();
+void shuffle(T first, T last, Random& rnd) {
+	const int n = last - first;
 	for (int i = 0; i < n - 1; ++i) {
 		int j = rnd.getInt(i, n);
-		swap(xs[i], xs[j]);
+		swap(first[i], first[j]);
 	}
 }

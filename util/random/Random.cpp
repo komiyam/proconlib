@@ -3,9 +3,10 @@
  * Xorshiftによる疑似乱数生成器
  */
 // END CUT HERE
-struct Random {
+class Random {
+private:
 	unsigned int x, y, z, w, t;
-
+public:
 	unsigned int rand(){
 		t = x ^ (x << 11);
 		x = y; y = z; z = w;
